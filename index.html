@@ -76,20 +76,74 @@ h2.t:after{content:"";display:block;width:56px;height:4px;background:var(--p2);b
 footer{background:#071d20;color:#9bb;text-align:center;padding:14px;font-size:14px}
 .fab{position:fixed;right:14px;bottom:14px;z-index:60;display:flex;flex-direction:column;gap:10px}
 .fab a{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px;text-decoration:none;box-shadow:0 4px 12px #0004;background:var(--p)}.fab a.w{background:#25d366}
+/* medicine */
+.mtool{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
+.msr{flex:1 1 280px;position:relative}
+.msr:before{content:"🔍";position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:15px;opacity:.7;pointer-events:none}
+.msr input{width:100%;padding:11px 14px 11px 42px;border:1.5px solid #cfe0e0;border-radius:12px;font:inherit;font-size:15px;background:#fff;color:var(--t)}
+.msr input:focus{outline:0;border-color:var(--p);box-shadow:0 0 0 3px #0f766e22}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1.5px solid #cfe0e0;background:#fff;color:var(--d);padding:7px 14px;border-radius:30px;font:inherit;font-size:14px;cursor:pointer}
+.chip:hover{border-color:var(--p)}.chip.on{background:var(--p);border-color:var(--p);color:#fff}
+.mst{color:var(--m);font-size:14px;margin:4px 0 14px}
+.mg{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.mc{background:#fff;border-radius:8px;padding:10px;display:flex;flex-direction:column;border:1px solid #e1e6e6;box-shadow:0 2px 8px #0b2e3322}
+.mc.c{--tc:#fde8ea;--ti:#b4233a}.mc.d{--tc:#e1edfb;--ti:#1f5fa8}.mc.o{--tc:#fdf0d9;--ti:#8f5200}
+.mt{position:relative;height:170px;display:flex;align-items:center;justify-content:center;background:var(--tc);border-radius:4px;overflow:hidden}
+.mp{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#fff}
+.mi{font-size:64px;font-weight:700;color:var(--ti);line-height:1}
+.mk{position:absolute;top:8px;left:8px;z-index:1;font-size:12px;font-weight:600;color:var(--ti);background:#ffffffe6;padding:1px 10px;border-radius:20px;box-shadow:0 1px 4px #0b2e3333}
+.mb{background:#f6f7f7;margin-top:10px;padding:12px 14px;display:flex;flex-direction:column;flex:1}
+.mb h3{font-size:17px;font-weight:700;color:#111;line-height:1.3;overflow-wrap:anywhere}
+.mb p{color:#222;font-size:13.5px;line-height:1.5;margin:3px 0 8px;flex:1;overflow-wrap:anywhere}
+.mb .fm{color:#c2500d;font-weight:700;font-size:16px;text-decoration:none;align-self:flex-start}
+.mb .fm:hover{text-decoration:underline}
+.az{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 12px}
+.az button{min-width:36px;height:36px;padding:0 8px;border:0;border-radius:6px;background:var(--d);color:#fff;font:inherit;font-size:14px;cursor:pointer}
+.az button:hover:not(:disabled){background:var(--p)}.az button.on{background:var(--p2);color:#06302f;font-weight:700}
+.az button:disabled{opacity:.3;cursor:default}.az button.all{padding:0 12px}
+.az button:focus-visible{outline:3px solid var(--p2);outline-offset:2px}
+.mt.zm{cursor:zoom-in}.mt.zm:after{content:"🔍";position:absolute;right:8px;bottom:8px;width:30px;height:30px;border-radius:50%;background:#0b2e33cc;color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;z-index:1}
+.mt.zm:focus-visible{outline:3px solid var(--p2);outline-offset:2px}
+#zm{position:fixed;inset:0;z-index:110;background:#000d;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px;gap:12px}#zm[hidden]{display:none}
+#zs{overflow:hidden;border-radius:10px;background:#fff;line-height:0;max-width:94vw;max-height:80vh}
+#zi{max-width:94vw;max-height:80vh;object-fit:contain;cursor:zoom-in;transition:transform .25s;display:block}
+#zc{color:#fff;font-weight:600;text-align:center;font-size:15px}
+#zx{position:absolute;top:12px;right:12px;width:44px;height:44px;border-radius:50%;border:1px solid #fff5;background:#ffffff26;color:#fff;font-size:22px;cursor:pointer}
+#zx:focus-visible{outline:3px solid var(--p2)}
+.pe{text-align:center;padding:36px 12px;color:var(--m);background:#fff;border-radius:16px}.pe[hidden]{display:none}
+.pgn{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.pgn button{min-width:40px;height:40px;padding:0 12px;border-radius:10px;border:1.5px solid #cfe0e0;background:#fff;color:var(--d);font:inherit;font-size:15px;cursor:pointer}
+.pgn button:hover:not(:disabled){border-color:var(--p)}.pgn button.on{background:var(--p);border-color:var(--p);color:#fff}
+.pgn button:disabled{opacity:.4;cursor:default}.pgn span{align-self:center;color:var(--m);padding:0 2px}
+.chip:focus-visible,.pgn button:focus-visible,.mb .fm:focus-visible{outline:3px solid var(--p2);outline-offset:2px}
+.msrc{text-align:center;margin-top:14px;color:var(--m);font-size:13px}.msrc a{color:var(--p)}
+@media(max-width:900px){.mg{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.az{gap:4px}.az button{min-width:32px;height:32px;font-size:13px;padding:0 6px}.mg{grid-template-columns:repeat(2,1fr);gap:10px}.mc{padding:6px}.mt{height:130px}.mi{font-size:46px}.mk{font-size:11px;padding:1px 8px}.mb{padding:10px;margin-top:6px}.mb h3{font-size:15px}.mb p{font-size:12.5px}.mb .fm{font-size:14px}.pgn button{min-width:36px;height:36px;padding:0 8px}}
 </style>
 </head>
 <body>
 <nav><div class="wrap"><b>💊 আরিফুল ইসলাম</b><button id="bg" aria-label="মেনু">☰</button>
-<ul id="mn"><li><a href="#home">হোম</a></li><li><a href="#intro">পরিচিতি</a></li><li><a href="#gallery">গ্যালারি</a></li><li><a href="#contact">যোগাযোগ</a></li></ul></div></nav>
+<ul id="mn"><li><a href="#home">হোম</a></li><li><a href="#intro">পরিচিতি</a></li><li><a href="#medicine">ওষুধ</a></li><li><a href="#gallery">গ্যালারি</a></li><li><a href="#contact">যোগাযোগ</a></li></ul></div></nav>
 
 <div id="home" class="wrap" style="padding:0">
 <div class="hero"><div class="track" id="sl"></div><button class="ha l" id="pv" aria-label="আগের">‹</button><button class="ha r" id="nx" aria-label="পরের">›</button><div class="hd" id="dt"></div></div>
 <div class="clock"><span id="cd"></span><span id="ct"></span></div></div>
 
-<section id="intro"><div class="wrap"><h2 class="t">আরিফুল ইসলাম পরিচিতি </h2><p class="sub">আপনার বিশ্বস্ত মেডিকেল ইনফরমেশন অফিসার</p>
+<section id="intro"><div class="wrap"><h2 class="t">আরিফুল ইসলাম পরিচিতি</h2><p class="sub">আপনার বিশ্বস্ত মেডিকেল ইনফরমেশন অফিসার</p>
 <div class="card intro"><img class="ph" id="pf" alt="আরিফুল ইসলাম"><div><h3>আরিফুল ইসলাম</h3><p><b>পদবি:</b> সিনিয়র মেডিকেল ইনফরমেশন অফিসার<br><b>প্রতিষ্ঠান:</b> অ্যারিস্টো ফার্মা</p><p style="margin-top:8px">আমি চিকিৎসক ও ফার্মেসির সাথে নিয়মিত যোগাযোগ রেখে ওষুধ সংক্রান্ত সঠিক ও হালনাগাদ তথ্য সরবরাহ করি।</p>
 <div class="tags"><span>ওষুধ তথ্য</span><span>ডাক্তার সাক্ষাৎ</span><span>ফার্মেসি সার্ভিস</span></div>
 <div class="ibtn"><a class="btn" href="tel:01888811263">📞 ফোন: ০১৮৮৮৮১১২৬৩</a><a class="btn wa" href="https://wa.me/8801888811263" target="_blank" rel="noopener">💬 হোয়াটসঅ্যাপে মেসেজ</a></div></div></div></div></section>
+
+<section id="medicine"><div class="wrap"><h2 class="t">অ্যারিস্টো ফার্মার ওষুধ</h2><p class="sub">Cardio-Diabetic Products (AG) – অ্যারিস্টোফার্মার অফিসিয়াল ওয়েবসাইট থেকে সংগৃহীত</p>
+<div class="mtool"><div class="msr"><input type="search" id="ms" placeholder="ওষুধের নাম বা জেনেরিক নাম লিখুন" aria-label="ওষুধ খুঁজুন" autocomplete="off"></div><div class="chips" id="mch"></div></div>
+<div class="az" id="maz" role="group" aria-label="অক্ষর অনুযায়ী ওষুধ খুঁজুন"></div>
+<div class="mst" id="mst" aria-live="polite"></div>
+<div class="mg" id="mg"></div>
+<div class="pe" id="pe" hidden>কোনো ওষুধ পাওয়া যায়নি। অন্য নাম লিখুন বা ফিল্টার বদলে দেখুন।</div>
+<div class="pgn" id="pgn" role="navigation" aria-label="পৃষ্ঠা পরিবর্তন"></div>
+<p class="msrc">সব ওষুধের বিস্তারিত তথ্য <a href="https://aristopharma.com/category_product/10" target="_blank" rel="noopener">aristopharma.com</a> থেকে নেওয়া</p>
+</div></section>
 
 <section id="gallery" style="padding-top:0"><div class="wrap"><h2 class="t">ছবির গ্যালারি</h2><p class="sub">ছবিতে ক্লিক করে বড় করে দেখুন, তীর বাটনে পরের ছবি</p>
 <div class="gal" id="gl"></div>
@@ -99,6 +153,7 @@ footer{background:#071d20;color:#9bb;text-align:center;padding:14px;font-size:14
 <a class="btn" href="tel:01888811263">📞 এখনই কল করুন</a><a class="btn wa" href="https://wa.me/8801888811263" target="_blank" rel="noopener">💬 হোয়াটসঅ্যাপ</a></div></section>
 <footer>© ২০২৬ আরিফুল ইসলাম – অ্যারিস্টো ফার্মা। সর্বস্বত্ব সংরক্ষিত।</footer>
 <div class="fab"><a class="w" href="https://wa.me/8801888811263" target="_blank" rel="noopener" aria-label="হোয়াটসঅ্যাপ">💬</a><a href="tel:01888811263" aria-label="কল">📞</a></div>
+<div id="zm" hidden role="dialog" aria-modal="true" aria-label="ওষুধের ছবি"><button id="zx" aria-label="বন্ধ করুন">✕</button><div id="zs"><img id="zi" alt=""></div><div id="zc"></div></div>
 <div id="lb"><button class="lbn l" id="lp">‹</button><img id="lbi" alt=""><button class="lbn r" id="ln">›</button><div id="lbc"></div></div>
 
 <script>
@@ -146,6 +201,68 @@ $('lbi').onclick=e=>e.stopPropagation();
 $('lp').onclick=e=>{e.stopPropagation();openLB(li-1)};$('ln').onclick=e=>{e.stopPropagation();openLB(li+1)};
 document.addEventListener('keydown',e=>{if($('lb').style.display!=='flex')return;if(e.key==='Escape')$('lb').style.display='none';if(e.key==='ArrowRight')openLB(li+1);if(e.key==='ArrowLeft')openLB(li-1)});
 drawG();
+/* medicine */
+const PR=[['agoxin','Agoxin','Digoxin','c','https://aristopharma.com/upload/product_manage/1633940441.jpg'],['ancor','Ancor','Bisoprolol Fumarate','c','https://aristopharma.com/upload/product_manage/1739264801.png'],['ancor-a','Ancor A','Bisoprolol Fumarate + Amlodipine','c','https://aristopharma.com/upload/product_manage/1702959153.png'],['ancor-plus','Ancor Plus','Bisoprolol Fumarate + Hydrochlorothiazide','c'],['centiva','Centiva','Ciprofibrate','c'],['cilnipin','Cilnipin','Cilnidipine','c'],['clocard','Clocard','Clopidogrel 75 mg','c'],['clocard-a','Clocard-A','Clopidogrel 75 mg + Aspirin 75 mg','c'],['dipoetin','Dipoetin','Darbepoetin Alfa','o'],['duoblock','Duoblock','Amlodipine Besilate + Olmesartan Medoxomil','c'],['empaglif','Empaglif','Empagliflozin','d'],['empaglif-m','Empaglif-M','Empagliflozin INN & Metformin Hydrochloride BP','d'],['glucomet','Glucomet','Metformin','d'],['gluconor','Gluconor','Glimepiride','d'],['glucozid','Glucozid','Gliclazide','d'],['glucozid-mr','Glucozid MR','Gliclazide','d'],['gluvan','Gluvan','Vildagliptin','d'],['gluvan-plus','Gluvan Plus','Vildagliptin + Metformin Hydrochloride','d'],['insulet','Insulet','Insulin Human (rDNA)','d'],['insulet-asp','Insulet ASP','Insulin Aspart (Recombinant DNA)','d'],['insulet-gn','Insulet GN','Insulin Glargine (rDNA)','d'],['intravas','Intravas','Enoxaparin Sodium','c'],['ivacard','Ivacard','Ivabradine','c'],['lacicard','Lacicard','Lacidipine','c'],['limpa','Limpa','Linagliptin INN & Empagliflozin INN','d'],['linaglip','Linaglip','Linagliptin','d'],['linaglip-m','Linaglip-M','Linagliptin + Metformin Hydrochloride','d'],['lodicard','Lodicard','Amlodipine + Atenolol','c'],['lodipin','Lodipin','Amlodipine','c'],['maxineb','Maxineb','Nebivolol Hydrochloride','c'],['metacard-mr','Metacard MR','Trimetazidine','c'],['nipotin','Nipotin','Erythropoietin','o'],['nitrocard','Nitrocard','Nitroglycerin','c'],['nitrocard-spray','Nitrocard Spray','Diluted Nitroglycerin','c'],['osartan','Osartan','Losartan','c'],['osartan-hz','Osartan-HZ','Losartan + Hydrochlorothiazide','c'],['pitavas','Pitavas','Pitavastatin','c'],['presulock','Presulock','Olmesartan Medoxomil','c'],['renvista','Renvista','Roxadustat','o'],['ruvan-z','Ruvan-Z','Rosuvastatin + Ezetimibe','c'],['ruvastin','Ruvastin','Rosuvastatin','c'],['sabicard','Sabicard','Sacubitril & Valsartan','c'],['tcl-r','TCL-R','Atorvastatin Calcium Trihydrate','c'],['temcard','Temcard','Telmisartan','c'],['temcard-a','Temcard-A','Telmisartan & Amlodipine','c'],['ticacard','Ticacard','Ticagrelor','c'],['tigicon','Tigicon','Fenofibrate','c'],['wikijet','Wikijet','Tirzepatide','d'],['wikitin','Wikitin','Omarigliptin','d']];
+/* ছবির তালিকা: 'slug':'ছবির লিংক বা ফাইলের নাম' */
+const IMGMAP={};
+const IMGB='https://aristopharma.com/upload/product_manage/',IMGB2='https://aristopharma.com/upload/brand_image/';
+const MT={c:'কার্ডিও',d:'ডায়াবেটিস',o:'অন্যান্য'},PER=12;
+let mq='',mty='all',mlt='',mpg=1;
+const CH=[['all','সব'],['c','কার্ডিও'],['d','ডায়াবেটিস'],['o','অন্যান্য']];
+function mlist(){const s=mq.trim().toLowerCase();return PR.filter(p=>(mty=='all'||p[3]==mty)&&(!mlt||p[1][0].toUpperCase()==mlt)&&(!s||(p[1]+' '+p[2]).toLowerCase().includes(s)))}
+function mpages(n,c){if(n<=7)return Array.from({length:n},(_,i)=>i+1);const s=new Set([1,n,c-1,c,c+1]),o=[];let l=0;[...s].filter(x=>x>=1&&x<=n).sort((a,b)=>a-b).forEach(x=>{if(l&&x-l>1)o.push('…');o.push(x);l=x});return o}
+function drawM(scroll){
+const L=mlist(),n=Math.max(1,Math.ceil(L.length/PER));if(mpg>n)mpg=n;
+const a=(mpg-1)*PER,part=L.slice(a,a+PER),g=$('mg');g.innerHTML='';
+part.forEach(p=>{const c=document.createElement('article');c.className='mc '+p[3];
+c.innerHTML='<div class="mt"><span class="mi"></span><span class="mk"></span></div><div class="mb"><h3></h3><p></p><a class="fm" target="_blank" rel="noopener">Find More</a></div>';
+c.querySelector('.mi').textContent=p[1][0];const pi=IMGMAP[p[0]]||p[4];if(pi){const im=document.createElement('img');im.className='mp';im.loading='lazy';im.alt=p[1]+' pack';im.referrerPolicy='no-referrer';const u=(/^https?:/.test(pi)?[pi]:[IMGB+pi,IMGB2+pi]).concat(IMGMAP[p[0]]?[]:(p[5]?[p[5]]:[]));let k=0;const tl=c.querySelector('.mt');im.onload=()=>{tl.classList.add('zm');tl.tabIndex=0;tl.setAttribute('role','button');tl.setAttribute('aria-label',p[1]+' ছবি বড় করে দেখুন');tl.onclick=()=>openZ(im.currentSrc||im.src,p[1]);tl.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openZ(im.currentSrc||im.src,p[1])}}};im.onerror=()=>{k++;if(k<u.length)im.src=u[k];else im.remove()};im.src=u[0];c.querySelector('.mt').prepend(im)}c.querySelector('.mk').textContent=MT[p[3]];
+c.querySelector('h3').textContent=p[1];c.querySelector('p').textContent=p[2];
+c.querySelector('a').href='https://aristopharma.com/single_product/'+p[0];c.querySelector('a').setAttribute('aria-label',p[1]+' – বিস্তারিত দেখুন');g.appendChild(c)});
+$('pe').hidden=L.length>0;
+$('mst').textContent=L.length?bn(L.length)+'টি ওষুধের মধ্যে '+bn(a+1)+'–'+bn(a+part.length)+' নম্বর দেখানো হচ্ছে':'';
+[...$('maz').children].forEach(b=>{b.className=(b.dataset.l==mlt&&mlt?'on':'')+(b.dataset.l==''?' all':'');b.setAttribute('aria-pressed',b.dataset.l==mlt)});
+[...$('mch').children].forEach((b,i)=>{b.className='chip'+(CH[i][0]==mty?' on':'');b.setAttribute('aria-pressed',CH[i][0]==mty)});
+const pg=$('pgn');pg.innerHTML='';
+if(n>1){const mk=(t,p,on,dis,lb)=>{const b=document.createElement('button');b.textContent=t;if(lb)b.setAttribute('aria-label',lb);if(on){b.className='on';b.setAttribute('aria-current','page')}b.disabled=!!dis;b.onclick=()=>{mpg=p;drawM(true)};pg.appendChild(b)};
+mk('‹ আগে',mpg-1,0,mpg==1,'আগের পৃষ্ঠা');
+mpages(n,mpg).forEach(x=>{if(x=='…'){const s=document.createElement('span');s.textContent='…';pg.appendChild(s)}else mk(bn(x),x,x==mpg,0,'পৃষ্ঠা '+bn(x))});
+mk('পরে ›',mpg+1,0,mpg==n,'পরের পৃষ্ঠা')}
+if(scroll)$('medicine').scrollIntoView({behavior:'smooth'})}
+CH.forEach(c=>{const b=document.createElement('button');b.className='chip';b.type='button';b.textContent=c[1]+' ('+bn(c[0]=='all'?PR.length:PR.filter(p=>p[3]==c[0]).length)+')';b.onclick=()=>{mty=c[0];mpg=1;drawM()};$('mch').appendChild(b)});
+(()=>{const have=new Set(PR.map(p=>p[1][0].toUpperCase()));const az=$('maz');
+const mk=(t,l,dis)=>{const b=document.createElement('button');b.type='button';b.textContent=t;b.dataset.l=l;b.disabled=dis;b.onclick=()=>{mlt=(mlt==l)?'':l;mpg=1;drawM()};az.appendChild(b)};
+mk('সব','',false);'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').forEach(l=>mk(l,l,!have.has(l)))})();
+$('ms').oninput=e=>{mq=e.target.value;mpg=1;drawM()};
+drawM();
+
+/* image zoom */
+let zz=false;
+function zo(e){const r=$('zs').getBoundingClientRect();$('zi').style.transformOrigin=((e.clientX-r.left)/r.width*100)+'% '+((e.clientY-r.top)/r.height*100)+'%'}
+function openZ(src,name){const i=$('zi');zz=false;i.style.transform='';i.style.cursor='zoom-in';i.src=src;i.alt=name;$('zc').textContent=name+' – ক্লিক বা ট্যাপ করে জুম করুন';$('zm').hidden=false;document.body.style.overflow='hidden';$('zx').focus()}
+function closeZ(){$('zm').hidden=true;$('zi').removeAttribute('src');document.body.style.overflow=''}
+$('zi').onclick=e=>{e.stopPropagation();const i=$('zi');zz=!zz;if(zz){zo(e);i.style.transform='scale(2.6)';i.style.cursor='zoom-out'}else{i.style.transform='';i.style.cursor='zoom-in'}};
+$('zs').addEventListener('pointermove',e=>{if(zz)zo(e)});
+$('zm').onclick=e=>{if(e.target===$('zm')||e.target===$('zc'))closeZ()};$('zx').onclick=closeZ;
+document.addEventListener('keydown',e=>{if(!$('zm').hidden&&e.key==='Escape')closeZ()});
+/* collect product images from aristopharma.com */
+const SRC='https://aristopharma.com/category_product/10',CK='aristoImgs10';
+function parseImgs(html){const d=new DOMParser().parseFromString(html,'text/html'),m={};
+const slug=a=>{const x=(a.getAttribute('href')||'').split('single_product/')[1];return x?x.split(/[?#/]/)[0]:''};
+const abs=u=>{try{return new URL(u,SRC).href}catch(e){return ''}};
+const good=u=>u&&/\/upload\//.test(u)&&!/logo/i.test(u);
+const pick=el=>{for(const u of [el.getAttribute('src'),el.getAttribute('data-src'),el.getAttribute('data-original'),(el.getAttribute('srcset')||'').split(' ')[0]]){const a=abs(u||'');if(good(a))return a}return ''};
+const find=el=>{let n=el;for(let i=0;i<6&&n;i++){const a=(n.tagName==='A'&&slug(n))?[n]:[...n.querySelectorAll('a[href*="single_product/"]')];const ss=new Set(a.map(slug).filter(Boolean));if(ss.size==1)return [...ss][0];if(ss.size>1)return '';n=n.parentElement}return ''};
+d.querySelectorAll('img').forEach(im=>{const u=pick(im);if(!u)return;const k=find(im);if(k&&!m[k])m[k]=u});
+d.querySelectorAll('[style*="url("]').forEach(el=>{const r=/url\(["']?([^"')]+)/.exec(el.getAttribute('style'));const u=r?abs(r[1]):'';if(!good(u))return;const k=find(el);if(k&&!m[k])m[k]=u});
+return m}
+async function getHtml(){for(const u of [SRC,'https://api.allorigins.win/raw?url='+encodeURIComponent(SRC),'https://corsproxy.io/?'+encodeURIComponent(SRC)]){try{const c=new AbortController(),t=setTimeout(()=>c.abort(),9000);const r=await fetch(u,{signal:c.signal});clearTimeout(t);if(!r.ok)continue;const h=await r.text();if(h.length>2000)return h}catch(e){}}return ''}
+async function collectImgs(){let ch=null;try{ch=JSON.parse(localStorage.getItem(CK)||'null')}catch(e){}
+if(ch&&ch.map){Object.assign(IMGMAP,ch.map);drawM()}
+if(ch&&ch.map&&Date.now()-ch.t<6048e5&&Object.keys(ch.map).length>=PR.length*.8)return;
+const h=await getHtml();if(!h)return;const m=parseImgs(h);if(!Object.keys(m).length)return;
+Object.assign(IMGMAP,m);try{localStorage.setItem(CK,JSON.stringify({t:Date.now(),map:m}))}catch(e){}drawM()}
+collectImgs();
 </script>
 </body>
 </html>
